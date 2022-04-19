@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from './SideBar';
 import ContentWrapper from './ContentWrapper';
 import {Route, Switch} from 'react-router-dom';
-import Product from './Product';
+import Product from './ProductListCart.js';
 import CategoriesInDb from './CategoriesInDb';
 import LastProductInDb from './LastProductInDb';
 import ProductListCart from "./ProductListCart"

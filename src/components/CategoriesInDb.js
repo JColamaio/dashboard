@@ -5,21 +5,21 @@ class CategoriesInDb extends Component{
 		super(props);
 		this.state = {
 		    categoriesList: [],
-
+            
 		}
 	} 
 
 	getCategories(){
         fetch("/api/products").then(r => r.json()).then(respuesta =>{ 
             this.setState({categoriesList: respuesta.categoriesData})
-
+            
         })
     }
 	componentDidMount(){
 		this.getCategories()
-
+        
 	}
-
+    
     render(){
         let categorias = this.state.categoriesList
     return (
@@ -41,7 +41,7 @@ class CategoriesInDb extends Component{
                         </div>
                     </div>
                 </div>
-
+           
         </React.Fragment>
     )
 
