@@ -1,38 +1,24 @@
-import React from 'react';
-import SideBar from './SideBar';
-import ContentWrapper from './ContentWrapper';
-import {Route, Switch} from 'react-router-dom';
-import Product from './ProductListCart.js';
-import CategoriesInDb from './CategoriesInDb';
-import LastProductInDb from './LastProductInDb';
-import ProductListCart from "./ProductListCart"
-import Error from './Error';
-
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <React.Fragment>
-      	<div id="wrapper">
-          <SideBar />
-          <Switch>
-
-          <Route path='/' exact>
-              <ContentWrapper/>
-          </Route>
-
-          <Route path="/Product" component={Product}/>
-
-          <Route path="/CategoriesInDb" component={CategoriesInDb}/>
-
-          <Route path="/LastProductInDb" component={LastProductInDb}/>
-          
-          <Route path="/ProductListCart" component={ProductListCart}/>
-
-          <Route component={Error}/>
-
-          </Switch>
-        </div>
-    </React.Fragment>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
